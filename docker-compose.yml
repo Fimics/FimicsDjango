@@ -1,0 +1,23 @@
+version: "2.4"
+
+services:
+
+    web:
+      build: .
+      command: python ./app/manage.py runserver 0.0.0.0:8000
+      volumes:
+        - .:/code
+      ports:
+        - "8000:8000"
+      links:
+        - db
+
+    db:
+      image: mysql:5.7
+      expose:
+        - "3306"
+      volumes:
+        - ./db:/var/lib/mysql
+      environment:
+        - MYSQL_DATABASE=app
+        - MYSQL_ROOT_PASSWORD=root      
