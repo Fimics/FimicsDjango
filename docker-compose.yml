@@ -4,11 +4,11 @@ services:
 
     web:
       build: .
-      command: python ./app/manage.py runserver 0.0.0.0:8888
+      command: python ./app/manage.py runserver 0.0.0.0:8080
       volumes:
         - .:/code
       ports:
-        - "8888:8888"
+        - "8080:8080"
       links:
         - db
 
