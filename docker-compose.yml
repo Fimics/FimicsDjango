@@ -4,11 +4,11 @@ services:
 
     web:
       build: .
-      command: python ./app/manage.py runserver 0.0.0.0:8000
+      command: python ./app/manage.py runserver 0.0.0.0:8888
       volumes:
         - .:/code
       ports:
-        - "8000:8000"
+        - "8888:8888"
       links:
         - db
 
@@ -20,4 +20,4 @@ services:
         - ./db:/var/lib/mysql
       environment:
         - MYSQL_DATABASE=app
-        - MYSQL_ROOT_PASSWORD=root      
+        - MYSQL_ROOT_PASSWORD=root
