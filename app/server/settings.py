@@ -25,7 +25,14 @@ SECRET_KEY = 'blq67hofe%2km&ogq#hzpa=krzt3p34air$-g!ge1li3hdez)4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+        'www.mxplayers.com',
+         '172.96.251.121',
+         '192.168.8.27',
+         '10.7.2.229'
+         '127.0.0.1',
+         '0.0.0.0',
+]
 
 
 # Application definition
